@@ -45,7 +45,7 @@ Replace `[GITHUB_TOKEN]` with your personal token. Note, `the GITHUB_TOKEN` must
 
 4. Sign in to the https://axebow.cloud/[Axebow web interface,role=external,window=_blank]
 +
-image::./doc/images/axebow-signin.png[Login,200,100]
+image::./doc/images/axebow-signin.png[Login,200]
 
 5. In the Homepage, on top toolbar, press the _Run Service_ button.
 +
