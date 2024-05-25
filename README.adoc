@@ -32,7 +32,7 @@ Replace `[NAMESPACE]` with the name of the personal account or organization to w
 ----
 # Authenticate to the Container registry.
 # 
-# Example: If you use GitHub Pakcages, use a personal access token
+# Example: If you use GitHub Packages, use a personal access token
 
 echo [GITHUB_TOKEN] | docker login ghcr.io -u [USERNAME] --password-stdin
 
@@ -40,10 +40,25 @@ echo [GITHUB_TOKEN] | docker login ghcr.io -u [USERNAME] --password-stdin
 
 docker push ghcr.io/[NAMESPACE]/axebow-first-application:1.0
 ----
++
+Replace `[GITHUB_TOKEN]` with your personal token. Note, `the GITHUB_TOKEN` must be granted with: _repo_, _write:packages_, _read:packages_ and _delete:packages_ permissions.
 
-Replace `[GITHUB_TOKEN]` with your personal token.
+4. Sign in to the https://axebow.cloud/[Axebow web interface,role=external,window=_blank]
++
+image::./doc/images/axebow-signin.png[Login,200,100]
 
-4. WIP
+5. In the Homepage, on top toolbar, press the _Run Service_ button.
++
+image::./doc/images/axebow-homepage-toolbar.png[]
+
+6. In the first step on _Run Service_ dialog, _How to run the service_:
+** Set:
+*** The _Container registry URL_ in which you pushed the container image, `$REGISTRY` in the build pattern above.
+*** The _Image tag_ with which you named the container image, `$REPOSITORY:$IMAGE_TAG` in the build pattern above.
+** For example, if you used GitHub Packages:
++
+image::./doc/images/axebow-run-service-step01.png[]
+
 
 
 
