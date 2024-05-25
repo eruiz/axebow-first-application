@@ -1,0 +1,45 @@
+{
+    "mainEntity": [
+        {
+            "id": "tomato",
+            "name": "Tomato 1Kg",
+            "mrp": "99",
+            "price": "30",
+            "buy": "5Kg",
+            "get": "1Kg"
+        },
+        {
+            "id": "potato",
+            "name": "Potato 1Kg",
+            "mrp": "50",
+            "price": "46",
+            "buy": "5Kg",
+            "get": "1Kg"
+        },
+        {
+            "id": "eggplant",
+            "name": "Brinjal 250g",
+            "mrp": "120",
+            "price": "99",
+            "buy": "5Kg",
+            "get": "1Kg"
+        },
+        {
+            "id": "okra",
+            "name": "Okra 100g",
+            "mrp": "28",
+            "price": "25",
+            "buy": "200g",
+            "get": "50g"
+        },
+        {
+            "id": "radish",
+            "name": "White Radish 250g",
+            "mrp": "55",
+            "price": "30",
+            "buy": "500g",
+            "get": "200g"
+        }
+    ]
+}
+
