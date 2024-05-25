@@ -2,5 +2,48 @@
 
 This project contains a Nestjs-Handlebars application source code to learn how to deploy an application with Axebow, the easiest Platform Engineering to deploy cloud native services.
 
-WIP
+== How to deploy
+
+1. Clone this repository to your local computer.
++
+[source]
+----
+git clone https://github.com/eruiz/axebow-first-application.git
+----
+
+2. Build the application and create the container image. By using a multistage build, both the application and the container image are build in only one step.
++
+Tag the container image using the name and optionally a tag you will use to publish in the container registry.
++
+[source]
+----
+# Build command pattern: docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+#
+# Example: Build to publish in GitHub Packages.
+
+docker build -t ghcr.io/[NAMESPACE]/axebow-first-application:1.0 .
+----
++
+Replace `[NAMESPACE]` with the name of the personal account or organization to which you want the package to be scoped.
+
+3. Publish the container image to the Container registry.
++
+[source]
+----
+# Authenticate to the Container registry.
+# 
+# Example: If you use GitHub Pakcages, use a personal access token
+
+echo [GITHUB_TOKEN] | docker login ghcr.io -u [USERNAME] --password-stdin
+
+# Example: Push the container image to the Container registry
+
+docker push ghcr.io/[NAMESPACE]/axebow-first-application:1.0
+----
+
+Replace `[GITHUB_TOKEN]` with your personal token.
+
+4. WIP
+
+
 
