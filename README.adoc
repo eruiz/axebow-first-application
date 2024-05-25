@@ -61,7 +61,7 @@ image::./doc/images/axebow-run-service-step01.png[]
 7. Second step, _Excecution environment_, set the required fields again:
 ** _Tenant_, choose the _freemium_ tenant which allow to deploy services at no cost.
 +
-IMPORTANT:: The _freemium_ tenant is *limited to 2 vCPUs and 2 GB* of memory for each user. Moreover, the resources and deployed services are cleaned each 2 hours. https://link-to-how-to-create-accounts-guide[Create your own Accounts] and https://link-to-how-to-create-environments-guide[Environments] to overpass these limits.
+IMPORTANT:: The _freemium_ tenant is *limited to 2 vCPUs and 2 GB of memory* for each user. Moreover, the resources and deployed services are cleaned each 2 hours. https://link-to-how-to-create-accounts-guide[Create your own Accounts] and https://link-to-how-to-create-environments-guide[Environments] to overpass these limits.
 +
 ** _CPU requirements_, set 0.5
 ** _Memory requirements_, set 0.5
@@ -70,5 +70,24 @@ IMPORTANT:: The _freemium_ tenant is *limited to 2 vCPUs and 2 GB* of memory for
 +
 image::./doc/images/axebow-run-service-step02.png[]
 
+8. Third step, _Configure the service_, create the domain resource that will allow to send requests, from the public Internet to the application.
++
+The application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
+** For example:
++
+image::./doc/images/axebow-run-service-step03.png[]
++
+WIP
 
+9. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the application attend the HTTPS requests.
+** _Channel name_, the communication channel unique identifier.
+** _Container port_, the exposed port.
++
+[INFO]
+====
+You can get info aobut the container exposed ports in the Dockerfile. If you open the Dockerfile you'll see the container listens on port 3000.
+
+`EXPOSE 3000`
+====
+** WIP
 
