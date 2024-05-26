@@ -1,13 +1,13 @@
-= Simple application for Axebow
+= Service web application for Axebow
 :toc:
 
 == Introduction
 
-This project contains a Nestjs-Handlebars application source code to learn how to deploy an application with Axebow, the easiest Platform Engineering to deploy cloud native services.
+This project contains a Nestjs-Handlebars web application source code to learn how to deploy a service web application with Axebow, the easiest Platform Engineering to deploy cloud native services.
 
 == How to deploy
 
-A ready to use container image has been published at `ghcr.io/eruiz/axebow-first-application:1.0`, deploy it following steps below:
+A ready to use container image has been published at `ghcr.io/eruiz/axebow-first-service:1.0`, deploy it following steps below:
 
 1. Sign in to the https://axebow.cloud/[Axebow web interface,role=external,window=_blank]
 +
@@ -39,7 +39,7 @@ The _freemium_ tenant is *limited to 2 vCPUs and 2 GB of memory* for each user. 
 +
 image::./doc/images/axebow-run-service-step02.png[]
 
-5. Third step, _Configure the service_, set the domain resource that will allow to send requests to the application from Internet.
+5. Third step, _Configure the service_, set the domain resource that will allow to send requests to the service web application from Internet.
 +
 [IMPORTANT]
 ====
@@ -54,10 +54,10 @@ Example:
 +
 image::./doc/images/axebow-run-service-step03-01.png[]
 +
-The application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
+The service web application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
 
 
-6. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the application attends the HTTPS requests.
+6. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the service web application attends the HTTPS requests.
 ** _Channel name_, the communication channel unique identifier.
 ** _Container port_, the exposed port.
 +
@@ -73,7 +73,7 @@ You can get info about the container exposed ports in the Dockerfile. If you ope
 +
 image::./doc/images/axebow-run-service-step04.png[]
 
-7. Finally run the application by pressing the button _Save_
+7. Finally run the service web application by pressing the button _Save_
 
 *WIP* Replace screenshots by screenshots containing names without dashes.
 
@@ -85,10 +85,10 @@ Follow this steps to build and publish your own container image:
 +
 [source]
 ----
-git clone https://github.com/eruiz/axebow-first-application.git
+git clone https://github.com/eruiz/axebow-first-service.git
 ----
 
-2. Build the application and create the container image. By using a multistage build, both the application and the container image are build in only one step.
+2. Build the service web application and create the container image. By using a multistage build, both the application and the container image are build in only one step.
 +
 Tag the container image using the name and optionally a tag you will use to publish in the container registry.
 +
@@ -98,7 +98,7 @@ Tag the container image using the name and optionally a tag you will use to publ
 #
 # Example: Build to publish in GitHub Packages.
 
-docker build -t ghcr.io/[NAMESPACE]/axebow-first-application:1.0 .
+docker build -t ghcr.io/[NAMESPACE]/axebow-first-service:1.0 .
 ----
 +
 Replace `[NAMESPACE]` with the name of the personal account or organization to which you want the package to be scoped.
@@ -115,7 +115,7 @@ echo [GITHUB_TOKEN] | docker login ghcr.io -u [USERNAME] --password-stdin
 
 # Example: Push the container image to the Container registry
 
-docker push ghcr.io/[NAMESPACE]/axebow-first-application:1.0
+docker push ghcr.io/[NAMESPACE]/axebow-first-service:1.0
 ----
 +
 Replace `[GITHUB_TOKEN]` with your personal token. Note, `the GITHUB_TOKEN` must be granted with: _repo_, _write:packages_, _read:packages_ and _delete:packages_ permissions.
