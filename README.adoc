@@ -72,7 +72,7 @@ image::./doc/images/axebow-run-service-step02.png[]
 
 8. Third step, _Configure the service_, set the domain resource that will allow to send requests to the application from Internet.
 +
-[INFO]
+[IMPORTANT]
 ====
 At the date of writing this guide, only axebow.cloud subdomains are supported.
 
@@ -90,7 +90,7 @@ image::./doc/images/axebow-run-service-step03-01.png[]
 ** _Channel name_, the communication channel unique identifier.
 ** _Container port_, the exposed port.
 +
-[INFO]
+[TIP]
 ====
 You can get info aobut the container exposed ports in the Dockerfile. If you open the Dockerfile you'll see the container listens on port 3000.
 
