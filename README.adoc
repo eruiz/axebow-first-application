@@ -103,7 +103,14 @@ You can get info aobut the container exposed ports in the Dockerfile. If you ope
 ====
 ** _Protocol_, select HTTPS because the service is a web application.
 ** _Public port / Domain_, select the domain created in the step 3.
+** Example:
++
+image::./doc/images/axebow-run-service-step04.png[]
 
 10. Finally run the application by pressing the button _Save_
+
+*WIP* Replace screenshots by screenshots containing names without dashes.
+ 
+
 
 
