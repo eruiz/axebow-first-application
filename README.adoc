@@ -52,8 +52,8 @@ image::./doc/images/axebow-signin.png[Login,200]
 image::./doc/images/axebow-homepage-toolbar.png[]
 
 6. In the first step _How to run the service_, set the required fields:
-** The _Container registry URL_ in which you pushed the container image, `$REGISTRY` in the build pattern above.
-** The _Image tag_ with which you named the container image, `$REPOSITORY:$IMAGE_TAG` in the build pattern above.
+** The _Container registry URL_ in which you pushed the container image.
+** The _Image tag_ with which you named the container image.
 ** For example, if you used GitHub Packages:
 +
 image::./doc/images/axebow-run-service-step01.png[]
@@ -70,16 +70,23 @@ IMPORTANT:: The _freemium_ tenant is *limited to 2 vCPUs and 2 GB of memory* for
 +
 image::./doc/images/axebow-run-service-step02.png[]
 
-8. Third step, _Configure the service_, create the domain resource that will allow to send requests, from the public Internet to the application.
+8. Third step, _Configure the service_, set the domain resource that will allow to send requests to the application from Internet.
++
+[INFO]
+====
+At the date of writing this guide, only axebow.cloud subdomains are supported.
+
+To create a new domain, just press on manage resources button and write the subdomain name, Axebow will generate the domain.
+
+image::./doc/images/axebow-run-service-step03-03.png[]
+====
 +
 The application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
 ** For example:
 +
-image::./doc/images/axebow-run-service-step03.png[]
-+
-WIP
+image::./doc/images/axebow-run-service-step03-01.png[]
 
-9. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the application attend the HTTPS requests.
+9. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the application attends the HTTPS requests.
 ** _Channel name_, the communication channel unique identifier.
 ** _Container port_, the exposed port.
 +
@@ -89,5 +96,9 @@ You can get info aobut the container exposed ports in the Dockerfile. If you ope
 
 `EXPOSE 3000`
 ====
-** WIP
+** _Protocol_, select HTTPS because the service is a web application.
+** _Public port / Domain_, select the domain created in the step 3.
+
+10. Finally run the application by pressing the button _Save_
+
 
