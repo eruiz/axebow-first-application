@@ -84,11 +84,12 @@ To create a new domain, just press on manage resources button and write the subd
 image::./doc/images/axebow-run-service-step03-03.png[]
 ====
 +
-The application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
-
-** For example:
+Example:
 +
 image::./doc/images/axebow-run-service-step03-01.png[]
++
+The application doesn't need to receive configuration injected via environment variables, so you let the Configuration parameters table empty.
+
 
 9. Last step, _Connect your service_, create a public port, accesible from the Internet and link it to the port the container listens and the application attends the HTTPS requests.
 ** _Channel name_, the communication channel unique identifier.
