@@ -63,7 +63,7 @@ The application doesn't need to receive configuration injected via environment v
 +
 [TIP]
 ====
-You can get info aobut the container exposed ports in the Dockerfile. If you open the Dockerfile you'll see the container listens on port 3000.
+You can get info about the container exposed ports in the Dockerfile. If you open the Dockerfile you'll see the container listens on port 3000.
 
 `EXPOSE 3000`
 ====
