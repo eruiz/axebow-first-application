@@ -75,7 +75,9 @@ image::./doc/images/axebow-run-service-step04.png[]
 
 7. Finally run the service web application by pressing the button _Save_
 
-*WIP* Replace screenshots by screenshots containing names without dashes.
+Navigate to the Runtime Dashboard and you'll see the serice web application running. Click on Domains list and press on the domain URL to navigate to the web application.
+
+image::./doc/images/axebow-run-service-step05.png[]
 
 == Build your own container image
 
