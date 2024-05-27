@@ -29,7 +29,7 @@ image::./doc/images/axebow-run-service-step01.png[]
 +
 [IMPORTANT]
 ====
-The _freemium_ tenant is *limited to 2 vCPUs and 2 GB of memory* for each user. Moreover, the resources and deployed services are cleaned each 2 hours. https://link-to-how-to-create-accounts-guide[Create your own Accounts] and https://link-to-how-to-create-environments-guide[Environments] to overpass these limits.
+The _freemium_ tenant is *limited to 2 vCPUs and 4 GB of memory* for each user. Moreover, the resources and deployed services are cleaned each 2 hours. https://link-to-how-to-create-accounts-guide[Create your own Accounts] and https://link-to-how-to-create-environments-guide[Environments] to overpass these limits.
 ====
 +
 ** _CPU requirements_, set 0.5
